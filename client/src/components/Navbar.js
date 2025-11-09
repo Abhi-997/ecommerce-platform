@@ -22,8 +22,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <Link to="/" className="logo">
-          <span className="logo-icon">��️</span>
-          <span className="logo-text">E-Shop</span>
+          <span className="logo-text"></span>
         </Link>
 
         <button

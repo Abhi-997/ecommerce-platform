@@ -1,6 +1,6 @@
-# E-Commerce Platform
+# FootGear - Football Jersey & Boots Store
 
-A modern, full-featured e-commerce website with payment gateway integration, user ratings & reviews, and shopping cart functionality.
+A simple e-commerce website for buying football jerseys and boots with payment gateway integration, user ratings & reviews, and shopping cart functionality.
 
 ## Features
 
@@ -115,7 +115,7 @@ ecommerce-platform/
 ### Products
 - `GET /api/products` - Get all products
 - `GET /api/products/:id` - Get single product
-- `GET /api/products?category=Electronics` - Filter by category
+- `GET /api/products?category=Jerseys` - Filter by category (Jerseys or Boots)
 
 ### Shopping Cart
 - `GET /api/cart/:userId` - Get cart items
@@ -165,10 +165,10 @@ ecommerce-platform/
 ## Features in Detail
 
 ### 🛍️ Product Catalog
-- 6 sample products across Electronics, Fashion, and Accessories
-- Beautiful product cards with hover effects
-- Category-based filtering
-- Product images from Unsplash
+- 8 products: Football jerseys and boots
+- Category filtering (Jerseys / Boots)
+- Product cards with images
+- Product detail pages with descriptions
 
 ### 🛒 Shopping Cart
 - Add/remove products
@@ -226,12 +226,12 @@ router.post('/', async (req, res) => {
 Edit `server/routes/products.js` to add more products:
 ```javascript
 {
-  id: 7,
-  name: 'Your Product',
+  id: 9,
+  name: 'Your Jersey/Boot Name',
   price: 99.99,
   description: 'Product description',
   image: 'image-url',
-  category: 'Electronics',
+  category: 'Jerseys', // or 'Boots'
   inStock: true
 }
 ```

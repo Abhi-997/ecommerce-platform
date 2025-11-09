@@ -5,7 +5,7 @@
 
 .checkout h1 {
   margin-bottom: 40px;
-  color: #333;
+  color: #000000;
 }
 
 .checkout-content {
@@ -20,8 +20,8 @@
 
 .checkout-form h2 {
   margin-bottom: 30px;
-  color: #333;
-  border-bottom: 2px solid #f0f0f0;
+  color: #000000;
+  border-bottom: 2px solid #000000;
   padding-bottom: 15px;
 }
 
@@ -39,21 +39,23 @@
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  color: #333;
+  color: #000000;
 }
 
 .form-group input {
   width: 100%;
   padding: 12px;
-  border: 2px solid #ddd;
+  border: 2px solid #000000;
   border-radius: 8px;
   font-size: 16px;
   transition: border-color 0.3s ease;
+  background: white;
+  color: #000000;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #000000;
 }
 
 .order-summary {
@@ -68,7 +70,7 @@
 
 .summary-card h2 {
   margin-bottom: 20px;
-  color: #333;
+  color: #000000;
 }
 
 .order-items {
@@ -99,21 +101,21 @@
 
 .order-item-info h4 {
   margin-bottom: 5px;
-  color: #333;
+  color: #000000;
 }
 
 .order-item-info span {
-  color: #999;
+  color: #666666;
   font-size: 14px;
 }
 
 .order-item-price {
   font-weight: bold;
-  color: #667eea;
+  color: #000000;
 }
 
 .summary-total {
-  border-top: 2px solid #f0f0f0;
+  border-top: 2px solid #000000;
   padding-top: 20px;
 }
 
@@ -121,13 +123,13 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  color: #666;
+  color: #000000;
 }
 
 .summary-row.total {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
   margin-top: 10px;
 }
 
@@ -144,7 +146,7 @@
 .success-icon {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #000000;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -155,18 +157,18 @@
 }
 
 .order-complete h1 {
-  color: #333;
+  color: #000000;
   margin-bottom: 15px;
 }
 
 .order-complete p {
-  color: #666;
+  color: #000000;
   font-size: 18px;
 }
 
 .redirect-text {
   margin-top: 20px;
-  color: #999;
+  color: #666666;
 }
 
 .empty-cart {
@@ -176,7 +178,7 @@
 
 .empty-cart h2 {
   margin-bottom: 30px;
-  color: #333;
+  color: #000000;
 }
 
 @media (max-width: 968px) {

@@ -1,18 +1,46 @@
 const express = require('express');
 const router = express.Router();
 
-// Simulate payment processing
+// Initialize Stripe only if key is provided
+let stripe = null;
+if (process.env.STRIPE_SECRET_KEY) {
+  stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+}
+
+// Create payment intent (for real Stripe integration)
+router.post('/create-payment-intent', async (req, res) => {
+  if (!stripe) {
+    return res.status(400).json({ error: 'Stripe not configured. Add STRIPE_SECRET_KEY to .env file' });
+  }
+  
+  try {
+    const { amount } = req.body;
+    
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount: Math.round(amount * 100), // Convert to cents
+      currency: 'usd',
+      automatic_payment_methods: {
+        enabled: true,
+      },
+    });
+
+    res.json({ clientSecret: paymentIntent.client_secret });
+  } catch (error) {
+    console.error('Stripe error:', error);
+    res.status(500).json({ error: 'Failed to create payment intent' });
+  }
+});
+
+// Process payment (simplified for demo)
 router.post('/', async (req, res) => {
   try {
     const { userId, amount, paymentMethod } = req.body;
     
-    // In production, integrate with Stripe or other payment gateway
-    // For now, simulate successful payment
+    // For demo purposes, we'll simulate payment
+    // In production, use the payment intent confirmation
     
-    // Simulate payment processing delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     
-    // Mock payment response
     const paymentIntent = {
       id: `pi_${Date.now()}`,
       status: 'succeeded',

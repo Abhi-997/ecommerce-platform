@@ -23,7 +23,7 @@ const Home = () => {
     }
   };
 
-  const categories = ['All', 'Electronics', 'Fashion', 'Accessories'];
+  const categories = ['All', 'Jerseys', 'Boots'];
   const filteredProducts = category === 'All' 
     ? products 
     : products.filter(p => p.category === category);
@@ -35,8 +35,8 @@ const Home = () => {
   return (
     <div className="home">
       <div className="hero">
-        <h1>Welcome to E-Shop</h1>
-        <p>Discover the best products at amazing prices</p>
+        <h1>Abhinaya Football Store</h1>
+        
       </div>
 
       <div className="container">

@@ -1,60 +1,78 @@
 const express = require('express');
 const router = express.Router();
 
-// Sample products database
+// Sample products database - Jerseys and Boots
 const products = [
   {
     id: 1,
-    name: 'Wireless Headphones',
-    price: 99.99,
-    description: 'High-quality wireless headphones with noise cancellation',
-    image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800',
-    category: 'Electronics',
+    name: 'Barcelona Home Jersey 2024',
+    price: 89.99,
+    description: 'Official Barcelona home jersey with authentic design and breathable fabric',
+    image: '/images/barcelona-jersey.jpg',
+    category: 'Jerseys',
     inStock: true
   },
   {
     id: 2,
-    name: 'Smart Watch',
-    price: 249.99,
-    description: 'Feature-rich smartwatch with health tracking',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800',
-    category: 'Electronics',
+    name: 'Real Madrid Away Jersey',
+    price: 85.99,
+    description: 'Classic Real Madrid away jersey, comfortable fit for match day',
+    image: '/images/realmadrid-jersey.jpg',
+    category: 'Jerseys',
     inStock: true
   },
   {
     id: 3,
-    name: 'Running Shoes',
-    price: 129.99,
-    description: 'Comfortable running shoes with advanced cushioning',
-    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800',
-    category: 'Fashion',
+    name: 'Manchester United Home Kit',
+    price: 92.99,
+    description: 'Official Manchester United home kit with player name printing option',
+    image: '/images/manutd-jersey.jpg', // Add your image file here: save as manutd-jersey.jpg in client/public/images/
+    category: 'Jerseys',
     inStock: true
   },
   {
     id: 4,
-    name: 'Leather Jacket',
-    price: 299.99,
-    description: 'Genuine leather jacket with premium quality',
-    image: 'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800',
-    category: 'Fashion',
+    name: 'Nike Mercurial Vapor Boots',
+    price: 149.99,
+    description: 'Lightweight football boots with superior grip and speed',
+    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=800&fit=crop',
+    category: 'Boots',
     inStock: true
   },
   {
     id: 5,
-    name: 'Laptop Backpack',
-    price: 79.99,
-    description: 'Durable backpack designed for laptops and tech gear',
-    image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800',
-    category: 'Accessories',
+    name: 'Adidas Predator Boots',
+    price: 159.99,
+    description: 'Premium football boots with enhanced ball control technology',
+    image: 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&h=800&fit=crop',
+    category: 'Boots',
     inStock: true
   },
   {
     id: 6,
-    name: 'Gaming Mouse',
-    price: 59.99,
-    description: 'Precision gaming mouse with RGB lighting',
-    image: 'https://images.unsplash.com/photo-1527814050087-3793815479db?w=800',
-    category: 'Electronics',
+    name: 'Puma Future Boots',
+    price: 139.99,
+    description: 'Modern football boots designed for agility and comfort',
+    image: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&h=800&fit=crop',
+    category: 'Boots',
+    inStock: true
+  },
+  {
+    id: 7,
+    name: 'Liverpool Home Jersey',
+    price: 88.99,
+    description: 'Official Liverpool FC home jersey, perfect for Anfield',
+    image: '/images/liverpool-jersey.jpg', // Replace with your image filename
+    category: 'Jerseys',
+    inStock: true
+  },
+  {
+    id: 8,
+    name: 'Nike Tiempo Boots',
+    price: 134.99,
+    description: 'Classic leather football boots with traditional feel',
+    image: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&h=800&fit=crop',
+    category: 'Boots',
     inStock: true
   }
 ];
